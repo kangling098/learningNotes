@@ -93,3 +93,4 @@ function createApplication(){
 
   return app;
 }
+module.exports= createApplication;

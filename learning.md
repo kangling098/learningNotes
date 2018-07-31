@@ -74,3 +74,19 @@ Redux-logger redux-thunk redux-promise
 Redux-saga mobx dva
 
 cnpm i react react-router-dom redux redux-logger redux-saga jsonwebtoken react-router-redux@next history bootstrap@3 -S
+
+## webpack
+1.webpack实战
+2. webpack优化
+3. webpack tapable
+4. webpack源码
+5. loader
+6. plugin
+7.写一个webpack 懒加载的使用 原理和实现
+
+
+## 如何调试线上报错代码(没有sourcemap) 使用 fiddler工具  代理调试
+
+## restful风格是什么风格
+
+## api接口伪造 easyMock 和 apizza 这两个工具

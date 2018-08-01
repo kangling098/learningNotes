@@ -1,3 +1,14 @@
+## 配置用户 (不配置用户不能提交代码)
+```
+git config --list
+git config --global user.name '你的名字'
+git config --global user.email '你的邮箱'
+```
+## 初始化 git
+一个项目初始化一次,不允许嵌套
+```
+git init 
+```
 ## 快速提交 
 ```
 git commit -a -m'备注'   只能提交已经加入过一次缓存区的文件
@@ -60,6 +71,21 @@ git stash pop 还原暂存的内容
 ```
 git merge 分支名
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## echo输入文件内容
 ```
 echo '内容' > 1.txt  

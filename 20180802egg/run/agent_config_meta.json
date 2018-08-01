@@ -1,0 +1,268 @@
+{
+  "keys": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\config\\config.default.js",
+  "view": {
+    "defaultViewEngine": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\config\\config.default.js",
+    "mapping": {
+      ".ejs": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\config\\config.default.js"
+    },
+    "root": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.1.0@egg-view\\config\\config.default.js",
+    "cache": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.1.0@egg-view\\config\\config.local.js",
+    "defaultExtension": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.1.0@egg-view\\config\\config.default.js"
+  },
+  "middleware": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\config\\config.default.js",
+  "robot": {
+    "uas": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\config\\config.local.js"
+  },
+  "time": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\config\\config.default.js",
+  "session": {
+    "maxAge": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.3.1.0@egg-session\\config\\config.default.js",
+    "key": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.3.1.0@egg-session\\config\\config.default.js",
+    "httpOnly": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.3.1.0@egg-session\\config\\config.default.js",
+    "encrypt": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.3.1.0@egg-session\\config\\config.default.js"
+  },
+  "security": {
+    "domainWhiteList": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js",
+    "protocolWhiteList": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js",
+    "defaultMiddleware": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js",
+    "csrf": {
+      "enable": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js",
+      "useSession": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js",
+      "ignoreJSON": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js",
+      "cookieName": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js",
+      "sessionName": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js",
+      "headerName": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js",
+      "bodyName": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js",
+      "queryName": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js"
+    },
+    "xframe": {
+      "enable": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js",
+      "value": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js"
+    },
+    "hsts": {
+      "enable": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.local.js",
+      "maxAge": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js",
+      "includeSubdomains": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js"
+    },
+    "dta": {
+      "enable": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js"
+    },
+    "noopen": {
+      "enable": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js"
+    },
+    "nosniff": {
+      "enable": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js",
+      "value": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js"
+    },
+    "xssProtection": {
+      "enable": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js",
+      "value": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js"
+    },
+    "csp": {
+      "enable": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js",
+      "policy": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js",
+      "checkAddress": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js"
+    }
+  },
+  "helper": {
+    "shtml": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.2.3@egg-security\\config\\config.default.js"
+  },
+  "jsonp": {
+    "limit": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-jsonp\\config\\config.default.js",
+    "callback": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-jsonp\\config\\config.default.js",
+    "csrf": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-jsonp\\config\\config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.1.0@egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.1.0@egg-onerror\\config\\config.default.js",
+    "templatePath": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.1.0@egg-onerror\\config\\config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-i18n\\config\\config.default.js",
+    "dirs": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-i18n\\config\\config.default.js",
+    "queryField": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-i18n\\config\\config.default.js",
+    "cookieField": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-i18n\\config\\config.default.js"
+  },
+  "watcher": {
+    "type": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.3.0.0@egg-watcher\\config\\config.local.js",
+    "eventSources": {
+      "default": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.3.0.0@egg-watcher\\config\\config.default.js",
+      "development": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.3.0.0@egg-watcher\\config\\config.default.js"
+    }
+  },
+  "multipart": {
+    "autoFields": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-multipart\\config\\config.default.js",
+    "defaultCharset": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-multipart\\config\\config.default.js",
+    "fieldSize": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-multipart\\config\\config.default.js",
+    "fields": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-multipart\\config\\config.default.js",
+    "fileSize": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-multipart\\config\\config.default.js",
+    "files": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-multipart\\config\\config.default.js",
+    "fileExtensions": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-multipart\\config\\config.default.js",
+    "whitelist": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-multipart\\config\\config.default.js"
+  },
+  "development": {
+    "watchDirs": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.4.0@egg-development\\config\\config.default.js",
+    "ignoreDirs": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.4.0@egg-development\\config\\config.default.js",
+    "fastReady": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.4.0@egg-development\\config\\config.default.js",
+    "reloadOnDebug": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.4.0@egg-development\\config\\config.default.js",
+    "overrideDefault": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.4.0@egg-development\\config\\config.default.js"
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.3.3.0@egg-schedule\\config\\config.default.js",
+      "file": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.3.3.0@egg-schedule\\config\\config.default.js"
+    }
+  },
+  "logrotator": {
+    "filesRotateByHour": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.3.0.3@egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.3.0.3@egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.3.0.3@egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.3.0.3@egg-logrotator\\config\\config.default.js",
+    "maxFiles": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.3.0.3@egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.3.0.3@egg-logrotator\\config\\config.default.js",
+    "maxDays": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.3.0.3@egg-logrotator\\config\\config.default.js"
+  },
+  "static": {
+    "prefix": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.1.1@egg-static\\config\\config.default.js",
+    "dir": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.1.1@egg-static\\config\\config.default.js",
+    "dynamic": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.1.1@egg-static\\config\\config.default.js",
+    "preload": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.1.1@egg-static\\config\\config.default.js",
+    "buffer": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.1.1@egg-static\\config\\config.default.js",
+    "maxFiles": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.1.1@egg-static\\config\\config.default.js"
+  },
+  "ejs": {
+    "root": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-view-ejs\\config\\config.default.js",
+    "cache": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-view-ejs\\config\\config.local.js",
+    "debug": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-view-ejs\\config\\config.default.js",
+    "compileDebug": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-view-ejs\\config\\config.default.js",
+    "delimiter": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-view-ejs\\config\\config.default.js",
+    "strict": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.0.0@egg-view-ejs\\config\\config.default.js"
+  },
+  "env": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+  "name": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+  "proxy": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+  "protocolHeaders": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+  "ipHeaders": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+  "hostHeaders": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+  "pkg": {
+    "name": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "version": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "description": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "main": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "scripts": {
+      "dev": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+      "debug": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+      "test": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js"
+    },
+    "keywords": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "author": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "license": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "dependencies": {
+      "antd": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+      "egg": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+      "egg-view-ejs": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+      "express": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js"
+    },
+    "devDependencies": {
+      "egg-bin": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+      "egg-mock": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js"
+    }
+  },
+  "baseDir": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+  "HOME": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+  "rundir": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+  "dump": {
+    "ignore": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "notFound": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "sitefile": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "middlewares": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "httpClient": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js"
+  },
+  "bodyParser": {
+    "enable": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "encoding": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "formLimit": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "jsonLimit": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "strict": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "queryString": {
+      "arrayLimit": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+      "depth": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+      "parameterLimit": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js"
+    }
+  },
+  "logger": {
+    "dir": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "encoding": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "env": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "level": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "consoleLevel": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "outputJSON": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "buffer": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "appLogName": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "coreLogName": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "agentLogName": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "errorLogName": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "coreLogger": {
+      "consoleLevel": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.local.js"
+    },
+    "allowDebugAtProd": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "dnsCacheMaxAge": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "request": {
+      "timeout": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+      "freeSocketKeepAliveTimeout": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+      "maxSockets": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+      "maxFreeSockets": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+      "freeSocketKeepAliveTimeout": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+      "maxSockets": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+      "maxFreeSockets": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "logging": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js"
+  },
+  "coreMiddleware": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+  "workerStartTimeout": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+      "port": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+      "hostname": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js",
+    "responseTimeout": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js"
+  },
+  "onClientError": "D:\\ACODE\\ZFjiagou\\zhufeng-zhengshi\\zry-project-20180728-01\\201803egg\\node_modules\\.2.9.1@egg\\config\\config.default.js"
+}

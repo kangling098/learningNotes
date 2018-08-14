@@ -11,3 +11,4 @@ const {Controller} = require('egg');
 }
 
 module.exports = CustomController;
+

@@ -1,24 +1,28 @@
-// ### 5. 2018年8月17日
-// 写一个函数，将字符串除了最后的四位，其他都变成#
-// ```js
-// maskify("4556364607935616") == "############5616"
-// maskify(     "64607935616") ==      "#######5616"
-// maskify(               "1") ==                "1"
-// maskify(                "") ==                 ""
+// ### 8. 2018年8月20日
+// 写一个函数`solution`，求比一个数字n小的所有3和5的整数倍数和。 
 
-// // "What was the name of your first pet?"
-// maskify("Skippy")                                   == "##ippy"
-// maskify("Nananananananananananananananana Batman!") == "####################################man!"
+// 比如10，比它小的3、5整数倍数有： 3,5,6,9， 所以和为23。
+// 比如16， 比它小的3，5整数倍数有： 3,5,6,9,10,12,15，所以和为60（15只计算1次）
+
+// 示例
 // ```
-// 写好后请在201808/20180817目录 下面建一个 姓名.md 的文件,请注意代码一定要用反引号包裹一下。
+// solution(10) // 23
+// solution(16) // 60
+// ```
+// 注意，如果输入负数，返回0
 
-// let maskify = (str)=>typeof str === 'string' ? str.length > 4 ? str.slice(0,-4).replace(/./g,"#")+str.slice(-4) : str :false
-let maskify = (str)=>typeof str === 'string' ? [...str].reverse().map(( v ,k ) => k > 3 ? '#' : v).reverse().join('') :false
-console.log(maskify("4556364607935616"))
-console.log(maskify("64607935616"))
-console.log(maskify("1"))
-console.log(maskify("12"))
-console.log(maskify("123"))
-console.log(maskify("1234"))
-console.log(maskify("12345"))
-console.log(maskify(""))
+// 思路,这个题目可以看做取 比数字n小的所有3和5的整数倍和减去比数字n小的15的整数倍和
+// 当 n 小于等于2时,返回0
+let solution = n => {
+    if(n<=3) return 0;
+    let sum = 0
+    for(let i = 3; i < n; i++){
+        if(i % 3 === 0 || i % 5 === 0){
+            sum+=i
+        }
+    }
+    return sum
+}
+console.log(solution(-10))
+console.log(solution(10))
+console.log(solution(16))

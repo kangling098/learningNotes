@@ -8,7 +8,7 @@ let getIndex = (arr,num) => {
 }
 function getIndexInner(arr,num,i,j){
     
-    let current = Math.round((i+j)/2);
+    const current = Math.round((i+j)/2);
     if(arr[current] === num){
         return current;
     }else if (arr[current] > num){

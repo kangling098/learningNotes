@@ -1,29 +1,21 @@
-// ### 9. 2018年8月22日
-// 在一个数组中大部分都是奇数(或偶数），只有1个可能是偶数（或奇数），写一个函数`special`找到这个不一样的值。
+// ### 11. 2018年8月23日
+// 写一个函数reverse反转一个数组A
 
-// ``` 
-// special( [2, 4, 0, 100, 4, 11, 2602, 36] ) // 11 唯一的奇数
+// 要求：
 
-// special( [160, 3, 1719, 19, 11, 13, -21] ) // 160 唯一的偶数
-// ```
+// 不可以使用Array.reverse
+// 请不要创建新数组
 
-const special = arr => {
-    let sin,
-    dou,
-    sinNum = 0,
-    douNum = 0
-    for(let i = 0; i< arr.length; i++){
-        if(arr[i] % 2) {
-            sinNum++
-            sin = i;
-        }else{
-            douNum++
-            dou = i
-        }
-        if((sinNum&&douNum)&&sinNum!=douNum){
-            return sinNum > douNum ?  arr[dou] : arr[sin];
-        }
-    }
+// const reverse = arr => {
+//     const obj = {length:arr.length}
+//     arr.reduce((prev,next,key)=>{
+//         prev[arr.length - 1 - key] = next;
+//         return prev;
+//     },obj)
+//     return Array.from(obj)
+// }
+// console.log(reverse([3,5,'ss','s']))
+const reverse = arr => {
+    return arr.map((val,key,cArr)=>(cArr[cArr.length-key-1]))
 }
-console.log(special( [2, 4, 0, 100, 4, 11, 2602, 36] ))
-console.log(special( [160, 3, 1719, 19, 11, 13, -21] ))
+console.log(reverse([3,5,'ss','s']))

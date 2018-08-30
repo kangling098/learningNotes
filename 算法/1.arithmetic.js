@@ -1,8 +1,10 @@
-const reverse = (arr,i=0,j=arr.length-1)=>{
-    if(i>=j) return arr;
-    [arr[i],arr[j]] = [arr[j],arr[i]];
-    return reverse(arr,++i,--j);
-}
-let arr = [1,2,3,4,5,6]
-console.log(reverse(arr))
-console.log(arr)
+// const floor_power_of2 = num => 2**Math.floor(Math.log2(num));
+
+
+const floor_power_of2 = num => num<=0 ? NaN : 2**Math.floor(Number.isInteger(Math.log2(num)) ? Math.log2(num) - 1: Math.log2(num));
+console.log(floor_power_of2(64))
+console.log(floor_power_of2(63))
+console.log(floor_power_of2(33))
+console.log(floor_power_of2(32))
+console.log(floor_power_of2(0))
+console.log(floor_power_of2(0.5))

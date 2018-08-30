@@ -20,7 +20,7 @@ git status 可以查看当前工作区状态
 
 ## git的对比
 - git diff 工作区和暂存区
-- git diff 分支名(master) 工作区和离市区
+- git diff 分支名(master) 工作区和历史区
 - git diff --cached 暂存区和历史区比较
 
 ## 撤销
@@ -32,7 +32,7 @@ git rest HEAD 文件名 回到上一次的缓存区
 
 ## 回滚历史版本
 ```
-git reset --hard 版本号  回退从历史区的某个版本,工作区和暂存区都会被覆盖
+git reset --hard 版本号  回退到历史区的某个版本,工作区和暂存区都会被覆盖
 git reset --hard head^   回退到历史区的上一个版本,工作区和暂存区都会被覆盖
 git reflog 查看所有版本
 git log 查看当前版本之前的版本

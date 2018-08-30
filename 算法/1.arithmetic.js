@@ -1,12 +1,8 @@
-const reverse = arr => {
-    let length = arr.length;
-    for(let i=0;i<Math.floor(length/2);i++){
-        let o = arr[i];
-        arr[i] = arr[length-i-1]
-        arr[length-i-1] = o;
-    }
-    return arr;
+const reverse = (arr,i=0,j=arr.length-1)=>{
+    if(i>=j) return arr;
+    [arr[i],arr[j]] = [arr[j],arr[i]];
+    return reverse(arr,++i,--j);
 }
-let arr = [1,2,3,4,5]
+let arr = [1,2,3,4,5,6]
 console.log(reverse(arr))
 console.log(arr)

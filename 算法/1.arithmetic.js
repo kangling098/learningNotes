@@ -1,27 +1,10 @@
-// ### 17. 2018年8月29日
-// 柯里化函数curry是这样一个函数，它将一个接受多参数的函数，转换成为接收连续单参数的高阶函数（可以被连续调用）。
+// const floor_power_of2 = num => 2**Math.floor(Math.log2(num));
 
-// 例如：
-// ```
-// function _add(a, b, c, d){
-//   return a + b + c + d
-// }
 
-// const add = curry(add)
-
-// console.log( add(1) ) // 函数
-// console.log( add(1)(2) ) // 函数
-// console.log( add(1)(2)(3) ) // 函数
-// console.log ( add(1)(2)(3)(4) ) // 10
-// ```
-// 再比如:
-// ```
-// const pow = curry(Math.pow)
-
-// pow(10)(2) // 100
-// ```
-
-const add = a => b => c => d => a+b+c+d;
-const pow = a => b => Math.pow(a,b);
-console.log ( add(1)(2)(3)(4) )
-console.log(pow(10)(2))
+const floor_power_of2 = num => num<=0 ? NaN : 2**Math.floor(Number.isInteger(Math.log2(num)) ? Math.log2(num) - 1: Math.log2(num));
+console.log(floor_power_of2(64))
+console.log(floor_power_of2(63))
+console.log(floor_power_of2(33))
+console.log(floor_power_of2(32))
+console.log(floor_power_of2(0))
+console.log(floor_power_of2(0.5))

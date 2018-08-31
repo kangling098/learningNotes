@@ -1,42 +1,28 @@
-// const floor_power_of2 = num => 2**Math.floor(Math.log2(num));
+// ### 18. 2018年8月31日
+// 写一个函数`peak`寻找一个数组的峰值位置。 比如数组: 1,3,5,7,4,2有峰值7；已排序数组1,2,3,4,5,6，有峰值6。有的数组有多个峰值，这里只需要返回任何一个。比如数组[1,2,3,2,7,6]有两个峰值3和7。
 
+// 如果一个元素左右元素都相同，那么这个元素就是峰值，比如数组1,1,1,1，每个元素都是峰值。
 
-const floor_power_of2 = num => num<=0 ? NaN : 2**Math.floor(Number.isInteger(Math.log2(num)) ? Math.log2(num) - 1: Math.log2(num));
-console.log(floor_power_of2(64))
-console.log(floor_power_of2(63))
-console.log(floor_power_of2(33))
-console.log(floor_power_of2(32))
-console.log(floor_power_of2(0))
-console.log(floor_power_of2(0.5))
+// 例如
+// ```
+// peak([1,2,3,4,5,6])  // 5(6所在的位置）
+// peak([1,3,5,7,4,2]) // 3（7所在的位置）
+// peak([1,2,3,2,7,6]) // 2(3所在的位置)
+// peak([1,1,1,1,1,1]) // 任何一个都是峰值
+// ```
 
+// 如果有多个峰值，只要随便返回一个就可以，不需要考虑顺序。
 
-18. 2018年8月30日题目 答案
-写一个函数floor_power_of2，求比x小的最大二的整数次幂。
-例如
-
-floor_power_of2(64) // 64
-floor_power_of2(63) // 32
-floor_power_of2(33) // 32
-floor_power_of2(32) // 32
-答案:
-
-function floor_power_of2(x){
-  x = x | (x >> 1)
-  x = x | (x >> 2)
-  x = x | (x >> 4)
-  x = x | (x >> 8)
-  x = x | (x >> 16)
-  x = x | (x >> 32)
-  return x - (x >> 1)
+const peak = arr =>{
+    if(arr.length<2) return 0;
+    if(arr[0]>arr[1]) return 0;
+    if(arr[arr.length-1]>arr[arr.length-2]) return arr.length - 1;
+    for(let i=1;i<arr.length;i++){
+        if(arr[i-1]<arr[i]&&arr[i]>arr[i+1]) return i
+    }
+    return 0;
 }
-
-参考:
-算法是要取x最高位，最左边的二进制位。 x | (x >> 1)相当于将所有1位置复制到它下一个位置： 0b101010 | (0b101010 >> 1 // 0b111111
-可以通过仔细分析x=0b101010和x=0b100000去理解这个算法，最终在return之前算法会得到0b11111……的二进制数
-答案2：
-
-function floor_power_of2(x) {
-  return 1 << Math.floor( Math.log2(x) )
-}
-
-// 目前的大部分PC答案2更快。 因为CPU支持log等数学指令。
+console.log(peak([1,2,3,4,5,6]))  // 5(6所在的位置）
+console.log(peak([1,3,5,7,4,2])) // 3（7所在的位置）
+console.log(peak([1,2,3,2,7,6])) // 2(3所在的位置)
+console.log(peak([1,1,1,1,1,1])) 

@@ -13,16 +13,13 @@
 
 // 如果有多个峰值，只要随便返回一个就可以，不需要考虑顺序。
 
-const peak = arr =>{
-    if(arr.length<2) return 0;
-    if(arr[0]>arr[1]) return 0;
-    if(arr[arr.length-1]>arr[arr.length-2]) return arr.length - 1;
-    for(let i=1;i<arr.length;i++){
-        if(arr[i-1]<arr[i]&&arr[i]>arr[i+1]) return i
-    }
-    return 0;
+const peak = (A, l = 0, r = A.length - 1) => {
+    if (l === r) return l;
+    let i = Math.floor((l + r) / 2);
+    return A[i] > A[i + 1] ? peak(A, l, i) : peak(A, ++i, r);
 }
 console.log(peak([1,2,3,4,5,6]))  // 5(6所在的位置）
 console.log(peak([1,3,5,7,4,2])) // 3（7所在的位置）
 console.log(peak([1,2,3,2,7,6])) // 2(3所在的位置)
 console.log(peak([1,1,1,1,1,1])) 
+console.log(peak([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,16,15,14,13,12,10,9,1])) 

@@ -18,3 +18,16 @@
 // }
 // console.log(find_missing([10, 12, 11, 15], 10, 15))
 // console.log(find_missing([1, 14, 11, 51, 15],50, 55))
+const find_missing = (A, low, high) => {
+    let arr = [];
+    const comparisonObj = A.reduce((memo,next)=>{
+        memo[next] = true;
+        return memo
+    },{})
+    while(low<high){
+        comparisonObj[low] !== true ? arr.push( low++ ) : low++;
+    }
+    return arr;
+}
+console.log(find_missing([10, 12, 11, 15], 10, 15))
+console.log(find_missing([1, 14, 11, 51, 15],50, 55))

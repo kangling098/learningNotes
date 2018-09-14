@@ -30,3 +30,29 @@ console.assert(sort('javascript')==='aacijprstv','sort example 01 wrong')
 console.assert(sort('dbca')==='abcd','sort example 02 wrong')
 console.log(sort('javascript'))
 ```
+
+答案二: 使用计数排序
+```js
+const counting_sort = str => {
+    // 首先,将字符串转换成以ASCII值排序的数组,将字符串转化为数字,
+    let A = [...str].map(val => val.toLowerCase().charCodeAt());
+    let max = Math.max(...A);
+    // 获取排序数组
+    let B = Array(max).fill(0);
+    // 待返回数组
+    let C = Array(A.length);
+    // 累计位递增
+    A.forEach(v => B[v]++);
+    // 求和
+    for (let i = 1; i < B.length; i++){
+        B[i] += B[i-1];
+    }
+    // 填充数组C
+    for(let i=0; i< A.length; i++){
+        let p = --B[A[i]];
+        C[p] = str[i];
+    }
+    return C.join('');
+}
+console.log(counting_sort('javascript'))
+```

@@ -1,27 +1,22 @@
-// 计数排序
-console.time('a')
-const arr = [0,4,55,3,44,2,33,2,44,5,33,6666,3,5]
+### 35.2018年9月15日题目
 
-// 计数排序,首先对数组取最大值,然后生成一个比最大值大一位的数组
-function counting_sort(A){
-    let max = Math.max(...arr);
-    // 生成排序数组
-    const B = Array(max+1).fill(0);
-    // 生成结果数组
-    const C = Array(A.length);
-    // 累计位递增
-    A.forEach(v=>B[v]++);
-    // 累计求和
-    for(let i = 1; i < B.length; i++){
-        B[i] += B[i-1];
-    }
-    // 结果取出
-    for(let i=0; i<A.length;i++){
-        //获取A中元素填充位置
-        let p = -1 + B[A[i]]-- ;
-        C[p] = A[i]
-    }
-    return C
+观看「递归和穷举」一节，给定一个字符串，写一个全排列函数 `permutationn(str,...)`。后面参数可以自行设计。 
+
+```
+permutation('abc') // [ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
+```
+function jStr(str,arr){
+    return arr.map(val=>str[val]).join('');
 }
-console.log(counting_sort(arr))
-console.timeEnd('a')
+function permutation(str,decisions = [],returnArr = []){
+    if(str.length === decisions.length){
+        returnArr.push(jStr(str,decisions))
+    }
+    for(let i in str){
+        if(!decisions.includes(i)){
+            permutation(str,[...decisions,i],returnArr)
+        }
+    }
+    return returnArr
+}
+console.log(permutation('abc'))

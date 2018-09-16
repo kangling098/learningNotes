@@ -15,7 +15,20 @@
 //     return Array.from(obj)
 // }
 // console.log(reverse([3,5,'ss','s']))
-const reverse = arr => {
-    return arr.map((val,key,cArr)=>(cArr[cArr.length-key-1]))
-}
-console.log(reverse([3,5,'ss','s']))
+// const reverse = arr => {
+//     return arr.map((val,key,cArr)=>(cArr[cArr.length-key-1]))
+// }
+// console.log(reverse([3,5,'ss','s']))
+
+
+const sequence = lambda => {
+    const take = n => Array(n).fill(null).map((item, index) => lambda(index));
+    const takeWhile = (optionLambda, n = 0, arr = []) => {
+        const result = lambda(n++);
+        if (optionLambda(result)) {
+            return takeWhile(optionLambda, n, arr.concat(result));
+        }
+        return arr;
+    };
+    return { take, takeWhile };
+};

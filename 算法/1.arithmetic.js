@@ -1,20 +1,20 @@
-// ### 21. 2018年9月2日题目
 
-// 写一个函数bit_count返回一个数字中所有二进制位的和。 比如说1234的二进制表示是10011010010，总共有5个1，那么和是5。
-// ### 21. 2018年9月2日题目
+// ### 22. 2018年9月3日题目
+// 封装一个函数`sequence`对一个无限序列求值。函数接收一个lambda表达式代表一个无限序列，然后提供两个操作`take`和`takeWhile`。
 
-// 写一个函数bit_count返回一个数字中所有二进制位的和。 比如说1234的二进制表示是10011010010，总共有5个1，那么和是5。
 
-// 答案一:
-const bit_count = (num) => {
-    let i=0;
-    let j=0;
-    while(2**j<=num) {
-        console.log(2**j,(2**j | num) , num)
-        if((2**j++ | num) === num){
-            i++
+// 例如：
+// ```
+// sequence( n => n * n ).take(5) // [0, 1, 4, 9, 16]
+// sequence( n => n * 4 ).takeWhile( n => n < 20 ) // [0, 4, 8, 12, 16]
+// ```
+const sequence = lambda =>({
+    takeWhile(fn2){
+        let arr = [],i=0,num;
+        while(fn2.call(null,num = lambda(i++))){
+            arr.push(num)
         }
+        return arr
     }
-    return i
-}
-console.log(bit_count(1234))
+})
+console.log(sequence( n => n * 4 ).takeWhile( n => n < 20 ))

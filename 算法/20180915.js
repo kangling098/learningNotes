@@ -5,15 +5,12 @@
 ```
 permutation('abc') // [ 'abc', 'acb', 'bac', 'bca', 'cab', 'cba' ]
 ```
-function jStr(str,arr){
-    return arr.map(val=>str[val]).join('');
-}
-function permutation(str,decisions = [],returnArr = []){
-    if(str.length === decisions.length){
-        returnArr.push(jStr(str,decisions))
+function permutation(str,decisions = [],returnArr = []){ 
+    if(str.length === decisions.length){ // O(1)
+        returnArr.push(decisions.map(val=>str[val]).join('')) // O(n)
     }
-    for(let i in str){
-        if(!decisions.includes(i)){
+    for(let i in str){ // O(n)
+        if(!decisions.includes(i)){ // O(1)
             permutation(str,[...decisions,i],returnArr)
         }
     }

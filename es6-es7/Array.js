@@ -15,3 +15,8 @@
 var fruits = ["Banana", "Orange", "Apple", "Mango", "Kiwi", "Papaya"];
 fruits.copyWithin(3, 0, 2);
 console.log(fruits)
+
+// slice splice
+
+arrayObject.splice(index,howmany,item1,.....,itemX)
+arrayObject.slice(start,end)

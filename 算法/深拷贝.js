@@ -10,7 +10,7 @@
 
 ```
 function copy(obj,hash = new WeakMap()){
-    (if hash.has(obj)) return hash.get(obj);
+    if(hash.has(obj)) return hash.get(obj);
     if(typeof obj !== 'object' || obj === null) return obj;
     if(obj instanceof Date) return new Date(obj);
     if(obj instanceof RegExp) return new RegExp(obj);

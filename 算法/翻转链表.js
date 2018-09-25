@@ -50,12 +50,12 @@ a.next = b;
 b.next = c;
 c.next = d;
 
-const reverse = (node,target) => {
-    let next = node.next;
-    if(target) node.next = target;
-    else node.next = null;
-
-    if(next) reverse(next,node);
+function reverse(node) {
+    if (node.next) {
+        reverse(node.next)
+        node.next.next = node
+        node.next = null
+    }
 }
 reverse(a)
 console.log( d.next.value ) // c

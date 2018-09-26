@@ -1,0 +1,73 @@
+### 44 2018年9月26日
+
+观看老鼠走迷宫的视频（回溯算法），写一个老鼠走迷宫算法`rat_in_maze(maze)`返回路径，再写一个函数`print`打印迷宫和走的过程，打印老鼠走的路径。 
+
+```
+const maze = [
+  [0,1,0,0,0,0],
+  [0,1,0,1,1,0],
+  [0,0,0,1,0,1],
+  [1,1,0,0,0,1],
+  [0,0,0,1,1,1],
+  [2,1,0,0,0,0]
+]
+
+print( rat_in_maze(maze) )
+
+```
+
+上述程序执行结果为:
+```
+x 1 0 0 0 0
+x 1 0 1 1 0
+x x x 1 0 1
+1 1 x 0 0 1
+x x x 1 1 1
+x 1 0 0 0 0
+```
+解法一:
+```js
+function rat_in_maze(
+    maze,
+    pos = [0,0], // 每次递归起始位置
+    path = [[...pos]], // 记录路径
+    tranverse = {} // 记录走过的位置
+){
+    const [x,y] = pos;
+    if(maze[x][y] === 2){
+        path.forEach(val=>{
+            let [x2,y2] = val;
+            maze[x2][y2]='x'
+        })
+        return maze;
+    }
+    const height = maze.length;
+    const width = maze[0].length;
+    let arr = [[x,y+1],[x,y-1],[x-1,y],[x+1,y]]; // 分别对应上下左右移动一格 
+    arr = arr.filter(val=>{ // 将合规的过滤出来
+        let [x1,y1] = val;
+        
+        return x1>=0&&x1<height&&y1>=0&&y1<width&&!tranverse[x1*width + y1]&&maze[x1][y1]!=1;
+    })
+    for(let i=0;i<arr.length;i++){
+        tranverse[arr[i][0]*width + arr[i][1]] = true;
+        const p = rat_in_maze(maze,arr[i],[...path,arr[i]],tranverse)
+        if(p) return p;
+    }
+}
+function print(obj){
+    obj.forEach(val=>{
+        console.log(...val)
+    })
+}
+const maze = [
+  [0,1,0,0,0,0],
+  [0,1,0,1,1,0],
+  [0,0,0,1,0,1],
+  [1,1,0,0,0,1],
+  [0,0,0,1,1,1],
+  [2,1,0,0,0,0]
+]
+
+print( rat_in_maze(maze) )
+```

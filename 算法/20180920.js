@@ -35,3 +35,19 @@ function*subsets(S){
 }
 
 ```
+// {
+//     s: //小于0
+//     m: //等于0
+//     d: //大于0
+// }
+let obj = [1,2,3,4,0,0,-1,-2].reduce((memo,current)=>{
+    if (current<0){
+        memo['s'] = memo['s'] ? memo['s']+1 : 1
+    }else if(current==0){
+        memo['m'] = memo['m'] ? memo['m']+1 : 1
+    }else{
+        memo['d'] = memo['d'] ? memo['d']+1 : 1
+    }
+    return memo;
+},{})
+console.log(obj)

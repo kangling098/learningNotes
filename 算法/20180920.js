@@ -9,7 +9,7 @@ function* subsets(S) {
     for (let i = 1; i < 1 << S.length; i++) {
         let s = [];
         for (let k = 0; k < S.length; k++){
-            const take = i & (i<<k);
+            const take = i & (1<<k);
             take && s.push(S[k]);
         }
         yield s;
@@ -20,4 +20,18 @@ function sum_subset(S,N){
 }
 const S = [1,3,8,5,2] 
 console.log(sum_subset(S,3))
+```
+
+```js
+function*subsets(S){
+    for(let i = 1; i< 1<<S.length; i++){
+        let s = [];
+        for(let k = 0; k < S.length; k++){
+            const take = i & i<<k;
+            take && s.push(S[k])
+        }
+    }
+    yield s
+}
+
 ```

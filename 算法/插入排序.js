@@ -19,7 +19,7 @@ const arr = [1, 2, 3, 4, 5, 6, 7, 8, 11, 10, 9];
 // console.log(sort(arr))
 function insert(A,i,x){
     let p = i-1;
-    if(p>=0&&A[p]>x){
+    while(p>=0&&A[p]>x){
         A[p+1] = A[p--]
     }
     A[p+1] = x;
@@ -30,3 +30,6 @@ function sort(A){
     }
     return A;
 }
+const arr = [3,6,5,4,55,443,54,34,54]
+sort(arr)
+console.log(arr)

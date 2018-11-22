@@ -1,18 +1,31 @@
 const arr = [1,3,5,6,7,8,9,11,23,33,42,44,46,54,55,57,77,88]
 
-const bsearch = (A,target) => {
-    let l = 0
-    let r = A.length - 1 
-    let guess 
-    while(l<=r){
-        guess = Math.floor((l+r)/2);
-        if(A[guess] === target){
-            return guess
-        }else if(A[guess] < target){
-            l = guess + 1
-        }else {
-            r = guess -1
-        }
+// const bsearch = (A,target) => {
+//     let l = 0
+//     let r = A.length - 1 
+//     let guess 
+//     while(l<=r){
+//         guess = Math.floor((l+r)/2);
+//         if(A[guess] === target){
+//             return guess
+//         }else if(A[guess] < target){
+//             l = guess + 1
+//         }else {
+//             r = guess -1
+//         }
+//     }
+//     return -1
+// }
+const bsearch = (arr,x) => {
+    let l = 0,
+    r = arr.length-1,
+    guess;
+
+    while(l <= r){
+        guess = ~~((l + r)/2);
+        if(arr[guess] === x) return guess;
+        else if(arr[guess] >= x) r = guess - 1;
+        else l = guess + 1;
     }
     return -1
 }

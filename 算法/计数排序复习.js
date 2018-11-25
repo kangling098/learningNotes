@@ -8,18 +8,20 @@
  **/
 
 const counting_sort = A => {
-    const k = Math.max(...A) // 获取最大值K
-    const B = Array(k + 1).fill(0) // 生成计数数组B
-    const C = Array(A.length) // 创建写入数组 C
-    // 开始计数
-    A.forEach(val=>B[val]++)
-    for(let i = 1; i < B.length; i++){
-        B[i] += B[i-1]
+    const k = Math.max(...A) // 获取到最大数
+    const B = Array(k + 1).fill(0) // 生成计数数组
+    const C = Array(A.length)
+    A.forEach(val => B[val]++)
+    for (let i = 1; i < B.length; i++) {
+        B[i] += B[i - 1]
     }
-    A.forEach(val=>C[--B[val]] = val)
+    A.forEach(val=>{
+        C[--B[val]] = val
+    })
+
     return C
 }
 
-const arr = [3,6,5,4,55,443,54,34,54]
+const arr = [3, 6, 5, 4, 55, 443, 54, 34, 54]
 
 console.log(counting_sort(arr))

@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.App {
+ 
+  width: 100vw;
+  height: 100vh;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  display: block;
+  line-height: 0;
+  content: "";
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.pull-right {
+  float: right;
+}
+
+.pull-left {
+  float: left;
+}
+
+.container-wrapper {
+  float: left;
+  height: 100%;
+  overflow-y: auto;
+}
+.wrapper1 {
+  width: 30%;
+  background: #ccc;
+}
+.wrapper2 {
+  width: 30%;
+  background: #fff;
+}
+.wrapper3 {
+  width: 40%;
+  background: #ccc;
+}
+.item {
+  float: left;
+  width: 50%;
+  height: 100px;
+  color: #000;
+}
+.item1 {
+  background: red;
+}
+.item:active {
+  background:yellow;
+}
+.item:hover {
+  background:green;
+}
+.item:focus {
+  background:blue;
+}

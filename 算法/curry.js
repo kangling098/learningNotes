@@ -20,3 +20,4 @@ const sum = (a,b,c,d,e)=>{
 }
 const currySum = curry(sum,1,3)
 console.log(currySum(2)(4)(5))
+

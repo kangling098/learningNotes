@@ -80,6 +80,7 @@ console.log('合并排序', A4)
 
 
 // 快速排序 核心是找中心点
+const swap = (A, i, j) => [A[i], A[j]] = [A[j], A[i]]
 const _qsort = (A, lo, hi) => {
     let i = lo // [lo,i) 比中间点小的区间
     let j = hi - 1 // [i,j] 未确定大小的区域

@@ -1,21 +1,31 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {
+    Component
+} from 'react';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+    componentWillMount(){
+        console.log('componentWillMount',document.body)
+        console.log('componentWillMount',window)
+    }
+    componentDidMount(){
+        console.log('componentDidMount',document.body)
+        console.log('componentDidMount',window)
+        this.div = document.createElement('div')
+        this.div.innerHTML = 'aaaaaaaaaaaaaa'
+        document.body.appendChild(this.div)
+    }
+    render() {
+        console.log('render',document)
+        console.log('render',window)
+        return ( 
+            <div className = "App" >
+                <div onClick={()=>{
+                    document.body.removeChild(this.div)
+                }}
+                >dianwo </div>
+            </div>
+        );
+    }
 }
 
 export default App;

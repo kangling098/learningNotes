@@ -20,3 +20,16 @@ const counting_sort = A => {
 }
 const arr = [4,55,3,440,0,0,0,0,2,33,2,44,5,33,6666,3,5]
 console.log(counting_sort(arr))
+
+const reverse = list => {
+    const _reverse = p => {
+        if(p.next){
+            reverse(p.next)
+            p.next.next = p.next
+            p.next = null
+        }else{
+            list.head = p
+        }
+    }
+    _reverse(list.head)
+}

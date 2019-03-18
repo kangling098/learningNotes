@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+  <meta charset=UTF-8>
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <meta http-equiv=X-UA-Compatible content="ie=edge">
+  <title>TEST</title>
+  <style>
+    html, body, #root {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+
+    ul, ul li {
+      list-style: none;
+    }
+
+    #logger-output {
+      padding: 20px 10px;
+      overflow: auto;
+      position: absolute;
+      top: 200px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  </style>
+  <!-- cordova.js引入 调试过程中选择对应平台的plugins -->
+   <!--<script src="/static/ios/cordova.js"></script>-->
+   <!--<script src="/static/android/cordova.js"></script>-->
+  <!-- 引入jquery做ajax请求测试 -->
+  <script src=http://10.5.24.110:3003/myWebLogTracker.min.js></script>
+  <script src=https://cdn.bootcss.com/jquery/1.12.3/jquery.js></script>
+  <!-- <script src="/static/require.min.js"></script> -->
+  <!-- <script src="/static/bigDataobject.js"></script> -->
+</head>
+<body>
+  <script>
+    // require(['myWebLogTracker'], function(myWebLogTracker) {
+    //   console.log(myWebLogTracker)
+    // });
+    
+    const __ml = typeof window.myWebLogTracker === 'function' && window.myWebLogTracker({
+      env: 'dev',
+      app_code: 'dev_app_code',
+      product_code: 'dev_product_code',
+      debug: true,
+      is_spa: false,
+      // manual_report_page_load: true,
+      // api_property_cb: (url) => url + '.custom',
+      route_title_maps: {
+        'test': '测试页面',
+      },
+      //api_ignore_urls: ['growingio.com', '/growingio.com/gi'],
+      // is_hybrid: true
+    });
+    window.__myWebLogTracker__.registUser({
+      tenant_code: 'test_tenant',
+      user_account: 'user1',
+    })
+    // __ml.reportLoaded();
+  </script>
+  <div id=root>
+    <div class=header>
+      页面跳转事件测试
+      <ul class=nav>
+        <li class=nav-item><a href=/test1>测试页1</a></li>
+        <li class=nav-item><a href=/test2>测试页2</a></li>
+        <li class=nav-item><a href=/test3>测试页3</a></li>
+        <li class=nav-item><a href=/test4>测试页4</a></li>
+      </ul>
+    </div>
+    <div data-log=测试按钮的log data-event=按钮测试>
+      <button class="test btn btn-main" id=btn-ajax-test>测试AJAX</button>
+      <button class="test btn btn-main" id=btn-fetch-test>测试FETCH</button>
+      <button class="test btn btn-main">
+        <i>12</i>
+        <b>测试文本</b>
+        获取
+      </button>
+      <button class="test btn btn-main" id=btn-user-test>测试切换用户</button>
+      <button class="test btn btn-main" id=btn-report-test>主动上报调用</button>
+      <button class=error-trigger>触发引用错误</button>
+      <button class=error-json-trigger>触发JSON.stringify循环引用错误</button>
+      <button class=error-ajax-trigger>触发ajax错误</button>
+      <button class=error-promise-trigger>触发promise unhandledrejection</button>
+    </div>
+
+    <div id=logger-output>
+  </div>
+  <script id=test-code>
+//     GIO数据上报:
+// 请求API https://apifwd.growingio.com/v2/0a1b4118dd954ec3bcc69da5138bdb96/web/action
+// 直接忽略:growingio.com
+
+// 神策数据上报：
+// 创建gif元素：https://sensorswww.cloud.sensorsdata.cn:4006/sa.gif
+// 直接忽略:sensorsdata.cn
+
+// 百度分析数据上报:
+// 创建gif元素: https://hm.baidu.com/hm.gif
+// 直接忽略:hm.baidu.com
+
+// 谷歌分析数据上报:
+// 创建gif元素：https://www.google-analytics.com/collect
+// 直接忽略：google-analytics.com
+
+
+// 听云数据上报：
+// 请求API: https://beacon.tingyun.com/xhr1
+// 直接忽略: tingyun.com
+    // ajax test click event
+    $('#btn-ajax-test').on('click', function() {
+      $.ajax({
+        type: 'get',
+        url: 'https://apifwd.growingio.com/v2/0a1b4118dd954ec3bcc69da5138bdb96/web/action'
+      });
+    });
+    // fetch test click event
+    $('#btn-fetch-test').on('click', function() {
+      fetch('http://error.com', {}).then(function(res) {
+        console.log('fetch test res', res);
+      }).catch(function(err) {
+        console.log('fetch test error', err);
+      });
+    });
+    // user change
+    $('#btn-user-test').on('click', () => {
+      window.__myWebLogTracker__.registUser({
+        tenant_code: `test_tenant_new}`,
+        user_account: `user_new`,
+      })
+    });
+    // report func
+    $('#btn-report-test').on('click', () => {
+      window.__myWebLogTracker__.report('测试', window._test_big_data_)
+    })
+    
+    $('.error-trigger').click(function(){
+      const c = a
+    })
+    $('.error-json-trigger').click(function(){
+      const c = {a:1,b:2}
+      c.c = c
+      console.log(JSON.stringify(c))
+    })
+    
+    $('.error-ajax-trigger').click(function(){
+      $.ajax({
+        type: 'get',
+        url: 'httpaaa://localhost:8080/api/asdfj/aaa',
+        error(e){
+          throw new Error(e)
+        },
+        success() {
+          throw new Error('测试ajax错误')
+        }
+      });
+    })
+    
+    $('.error-promise-trigger').click(function(){
+      new Promise((resolve, reject) => {
+        reject('asd')
+      })
+    })
+  </script>
+  </div>
+<script type=text/javascript src=bundle.7041dfe92dd526d3d179.js?7041dfe92dd526d3d179></script></body>
+</html>

@@ -590,11 +590,13 @@ var VdsInstrumentAgent = {
       VdsInstrumentAgent.defaultPageCallbacks[t] = function () {
         this.__route__ && VdsInstrumentAgent.observer.pageListener(this, t, arguments)
       }
-    }), VdsInstrumentAgent.appHandlers.forEach(function (t) {
+    });
+    VdsInstrumentAgent.appHandlers.forEach(function (t) {
       VdsInstrumentAgent.defaultAppCallbacks[t] = function () {
         VdsInstrumentAgent.observer.appListener(this, t, arguments)
       }
-    }), e ? (global.GioPage = VdsInstrumentAgent.GrowingPage, global.GioApp = VdsInstrumentAgent.GrowingApp, global.GioComponent = VdsInstrumentAgent.GrowingBehavior, global.GioBehavior = VdsInstrumentAgent.GrowingBehavior) : (Page = function () {
+    });
+    e ? (global.GioPage = VdsInstrumentAgent.GrowingPage, global.GioApp = VdsInstrumentAgent.GrowingApp, global.GioComponent = VdsInstrumentAgent.GrowingBehavior, global.GioBehavior = VdsInstrumentAgent.GrowingBehavior) : (Page = function () {
       return VdsInstrumentAgent.GrowingPage(arguments[0])
     }, App = function () {
       return VdsInstrumentAgent.GrowingApp(arguments[0])

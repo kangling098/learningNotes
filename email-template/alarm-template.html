@@ -1,0 +1,414 @@
+<meta name="format-detection" content="telephone=no"/>
+<meta name="viewport" content="width=800;initial-scale=1;maximum-scale=1" />
+<div style="min-width:700px;background-color:#F3F7FC;width:100%;padding:48px 0;">
+  <div style="width:700px;margin:0px auto;">
+    <!-- mail body start -->
+    <div>
+      <!-- product start -->
+      <div style="background-image:none;background-position:0% 0%;background-size:auto;background-attachment:scroll;background-origin:padding-box;background-clip:border-box;background-color:rgb(255,255,255);box-shadow:rgba(35,113,215,0.1) 0px 2px 4px 0px;border-radius:8px;">
+        <div style="height:28px;padding:16px 24px;line-height:28px;font-size:20px;font-weight:600;color:rgb(255,255,255);background-color:rgb(24,144,255);background-image:linear-gradient(90deg,rgb(23,126,217) 1%,rgb(17,157,222) 97%);border-radius:8px 8px 0px 0px;box-sizing:content-box!important;">
+          产品数据概览
+        </div>
+        <div style="">
+          <div>
+
+          </div>
+        </div>
+        <div style="padding:8px 0px;">
+          <div style="padding:24px;">
+            <div style="height:22px;line-height:22px;font-size:18px;font-weight:600;color:rgba(0,0,0,0.85);border-left:4px solid rgb(24,144,255);padding-left:8px;box-sizing:content-box!important;">
+              访问量
+            </div>
+            <div style="padding-top:24px;">
+              <div style="float:left;width:127px;border-right:1px solid rgba(0,0,0,0.09);height:220px;position:relative;">
+                <div style="padding-top:83px;">
+                  <div style="padding-bottom:0px;height:54px;box-sizing:content-box!important;">
+                    <p style="margin:0px 0px 2px;padding:0px;font-size:16px;color:rgba(0,0,0,0.45);line-height:24px;">
+                      访问量总数
+                    </p>
+                    <p style="margin:0px;padding:0px;font-size:20px;font-weight:600;color:rgba(0,0,0,0.85);line-height:28px;white-space:nowrap;">
+                      {{ product_page_view_total }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div style="height:220px;margin-left:128px;padding-left:24px;box-sizing:content-box!important;">
+                <img src="{{ product_page_view_image|safe }}" alt="访问量" width="500" height="220" style="display:block;width:500px;height:220px;" />
+              </div>
+            </div>
+          </div>
+          <div style="padding:24px;">
+            <div style="height:22px;line-height:22px;font-size:18px;font-weight:600;color:rgba(0,0,0,0.85);border-left:4px solid rgb(24,144,255);padding-left:8px;box-sizing:content-box!important;">
+              活跃用户
+            </div>
+            <div style="padding-top:24px;">
+              <div style="float:left;width:127px;border-right:1px solid rgba(0,0,0,0.09);height:220px;position:relative;">
+                <div style="padding-top:83px;">
+                  <div style="padding-bottom:0px;height:54px;box-sizing:content-box!important;">
+                    <p style="margin:0px 0px 2px;padding:0px;font-size:16px;color:rgba(0,0,0,0.45);line-height:24px;">
+                      活跃用户总数
+                    </p>
+                    <p style="margin:0px;padding:0px;font-size:20px;font-weight:600;color:rgba(0,0,0,0.85);line-height:28px;white-space:nowrap;">
+                      {{ product_active_user_number }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div style="height:220px;margin-left:128px;padding-left:24px;box-sizing:content-box!important;">
+                <img src="{{ product_active_user_city|safe }}" alt="活跃用户" width="500" height="220" style="display:block;width:500px;height:220px;">
+              </div>
+            </div>
+          </div>
+          <div style="padding:24px;">
+            <div style="height:22px;line-height:22px;font-size:18px;font-weight:600;color:rgba(0,0,0,0.85);border-left:4px solid rgb(24,144,255);padding-left:8px;box-sizing:content-box!important;">
+              异常总数
+            </div>
+            <div style="height:54px;padding-top:24px;box-sizing:content-box!important;">
+              <div style="width:217px;display:inline-block;height:54px;">
+                <p style="margin:0px 0px 2px;padding:0px;font-size:16px;color:rgba(0,0,0,0.45);line-height:24px;">
+                  API异常总数
+                </p>
+                <p style="margin:0px;padding:0px;font-size:20px;font-weight:600;color:rgba(0,0,0,0.85);line-height:28px;white-space:nowrap;">
+                  {{ product_api_error_number }}
+                </p>
+              </div><div style="width:217px;display:inline-block;height:54px;">
+                <p style="margin:0px 0px 2px;padding:0px;font-size:16px;color:rgba(0,0,0,0.45);line-height:24px;">
+                  前端错误总数
+                </p>
+                <p style="margin:0px;padding:0px;font-size:20px;font-weight:600;color:rgba(0,0,0,0.85);line-height:28px;white-space:nowrap;">
+                  {{ product_error_crash_number }}
+                </p>
+              </div><div style="width:217px;display:inline-block;height:54px;">
+                <p style="margin:0px 0px 2px;padding:0px;font-size:16px;color:rgba(0,0,0,0.45);line-height:24px;">
+                  APP崩溃总数
+                </p>
+                <p style="margin:0px;padding:0px;font-size:20px;font-weight:600;color:rgba(0,0,0,0.85);line-height:28px;white-space:nowrap;">
+                  {{ product_app_crash_number }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- product end -->
+      <!-- apps start -->
+      {% for app in apps %}
+      <div style="background-image:none;background-position:0% 0%;background-size:auto;background-attachment:scroll;background-origin:padding-box;background-clip:border-box;background-color:rgb(255,255,255);box-shadow:rgba(35,113,215,0.1) 0px 2px 4px 0px;border-radius:8px;margin-top:48px;">
+        <div style="height:28px;padding:16px 24px;line-height:28px;font-size:20px;font-weight:600;color:rgb(255,255,255);background-color:rgb(24,144,255);background-image:linear-gradient(90deg,rgb(23,126,217) 1%,rgb(17,157,222) 97%);border-radius:8px 8px 0px 0px;box-sizing:content-box!important;">
+          {{ app.app_name }}
+        </div>
+        <div style="padding:8px 0px;">
+          <div style="padding:24px;">
+            <div style="height:22px;line-height:22px;font-size:18px;font-weight:600;color:rgba(0,0,0,0.85);border-left:4px solid rgb(24,144,255);padding-left:8px;">
+              访问量
+            </div>
+            <div style="padding-top:24px;">
+              <div style="float:left;width:127px;border-right:1px solid rgba(0,0,0,0.09);height:220px;position:relative;">
+                <div style="padding-top:83px;">
+                  <div style="padding-bottom:0px;height:54px;box-sizing:content-box!important;">
+                    <p style="margin:0px 0px 2px;padding:0px;font-size:16px;color:rgba(0,0,0,0.45);line-height:24px;">
+                      访问量总数
+                    </p>
+                    <p style="margin:0px;padding:0px;font-size:20px;font-weight:600;color:rgba(0,0,0,0.85);line-height:28px;white-space:nowrap;">
+                      {{ app.app_page_view_total }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div style="height:220px;margin-left:128px;padding-left:24px;box-sizing:content-box!important;">
+                <img src="{{ app.app_page_view_image|safe }}" alt="访问量" width="500" height="220" style="display:block;width:500px;height:220px;" />
+              </div>
+            </div>
+          </div>
+          <div style="padding:24px;">
+            <div style="height:22px;line-height:22px;font-size:18px;font-weight:600;color:rgba(0,0,0,0.85);border-left:4px solid rgb(24,144,255);padding-left:8px;box-sizing:content-box!important;">
+              活跃用户
+            </div>
+            <div style="padding-top:24px;">
+              <div style="float:left;width:127px;border-right:1px solid rgba(0,0,0,0.09);height:220px;position:relative;">
+                <div style="padding-top:83px;">
+                  <div style="padding-bottom:0px;height:54px;box-sizing:content-box!important;">
+                    <p style="margin:0px 0px 2px;padding:0px;font-size:16px;color:rgba(0,0,0,0.45);line-height:24px;">
+                      活跃用户总数
+                    </p>
+                    <p style="margin:0px;padding:0px;font-size:20px;font-weight:600;color:rgba(0,0,0,0.85);line-height:28px;white-space:nowrap;">
+                      {{ app.app_active_user_number }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div style="height:220px;margin-left:128px;padding-left:24px;box-sizing:content-box!important;">
+                <img src="{{ app.app_active_user_city_image|safe }}" alt="活跃用户" width="500" height="220" style="display:block;width:500px;height:220px;" />
+              </div>
+            </div>
+          </div>
+          <div style="padding:24px;">
+            <div style="height:22px;line-height:22px;font-size:18px;font-weight:600;color:rgba(0,0,0,0.85);border-left:4px solid rgb(24,144,255);padding-left:8px;box-sizing:content-box!important;">
+              页面加载时间Top5 - P90>3s
+            </div>
+            <div style="padding-top:24px;">
+              <ul style="display:block;list-style:none outside none;margin:0px;padding:0px 8px;border:1px solid rgba(0,0,0,0.15);border-radius:4px;">
+                <li style="display:block;list-style:none outside none;margin:0px;padding:11px 8px 11px 8px;height:22px;border-top:0px none rgba(0,0,0,0.65);font-size:14px;color:rgba(0,0,0,0.65);line-height:22px;font-weight:600;box-sizing:content-box!important;">
+                  <div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;width:221px;height:22px;line-height:22px;">
+                    页面title
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    加载次数
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    P80(ms)
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    P90(ms)
+                  </div>
+                </li>
+                {% if app.app_page_load_list %}
+                {% for data in app.app_page_load_list %}
+                <li style="display:block;list-style:none outside none;margin:0px;padding:8px 8px 7px 8px;height:22px;border-top:1px solid rgba(0,0,0,0.09);font-size:14px;color:rgba(0,0,0,0.65);line-height:22px;box-sizing:content-box!important;">
+                  <div {% if not data[0][1] %} title="{{ data[0][0] }}" {% endif %} style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;width:221px;height:22px;line-height:22px;">
+                    {{ data[0][0] }}
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    {{ data[3] }}
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    {{ data[1] }}
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    {{ data[2] }}
+                  </div>
+                </li>
+                {% endfor %}
+                {% else %}
+                <li style="display:block;list-style:none outside none;margin:0px;padding:8px 8px 7px;height:22px;border-top:1px solid rgba(0,0,0,0.09);font-size:14px;color:rgba(0,0,0,0.25);line-height:22px;text-align:center;box-sizing:content-box!important;">
+                  暂无数据
+                </li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+          <div style="padding:24px;">
+            <div style="height:22px;line-height:22px;font-size:18px;font-weight:600;color:rgba(0,0,0,0.85);border-left:4px solid rgb(24,144,255);padding-left:8px;box-sizing:content-box!important;">
+              API响应时间Top5 - P90>3s
+            </div>
+            <div style="padding-top:24px;">
+              <ul style="display:block;list-style:none outside none;margin:0px;padding:0px 8px;border:1px solid rgba(0,0,0,0.15);border-radius:4px;">
+                <li style="display:block;list-style:none outside none;margin:0px;padding:11px 8px 11px 8px;height:22px;border-top:0px none rgba(0,0,0,0.65);font-size:14px;color:rgba(0,0,0,0.65);line-height:22px;font-weight:600;box-sizing:content-box!important;">
+                  <div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;width:221px;height:22px;line-height:22px;">
+                    API
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    请求次数
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    P80(ms)
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    P90(ms)
+                  </div>
+                </li>
+                {% if app.app_api_response_list %}
+                {% for data in app.app_api_response_list %}
+                <li style="display:block;list-style:none outside none;margin:0px;padding:8px 8px 7px 8px;height:22px;border-top:1px solid rgba(0,0,0,0.09);font-size:14px;color:rgba(0,0,0,0.65);line-height:22px;box-sizing:content-box!important;">
+                  <div {% if not data[0][1] %} title="{{ data[0][0] }}" {% endif %} style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;width:221px;height:22px;line-height:22px;">
+                    {{ data[0][0] }}
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    {{ data[3] }}
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    {{ data[1] }}
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    {{ data[2] }}
+                  </div>
+                </li>
+                {% endfor %}
+                {% else %}
+                <li style="display:block;list-style:none outside none;margin:0px;padding:8px 8px 7px;height:22px;border-top:1px solid rgba(0,0,0,0.09);font-size:14px;color:rgba(0,0,0,0.25);line-height:22px;text-align:center;box-sizing:content-box!important;">
+                  暂无数据
+                </li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+          <div style="padding:24px;">
+            <div style="height:22px;line-height:22px;font-size:18px;font-weight:600;color:rgba(0,0,0,0.85);border-left:4px solid rgb(24,144,255);padding-left:8px;">
+              API异常
+            </div>
+            <div style="padding-top:24px;">
+              <div style="width:652px;text-align:center;height:64px;box-sizing:content-box!important;">
+                <p style="margin:0;padding:0 0 8px;font-size:16px;color:rgba(0,0,0,0.45);line-height:24px;height:24px;box-sizing:content-box!important;">
+                  API请求次数
+                </p>
+                <p style="margin:0px;padding:0px;font-size:30px;font-weight:600;color:rgba(0,0,0,0.85);line-height:32px;white-space:nowrap;height:32px;box-sizing:content-box!important;">
+                  {{ app.app_api_request_number }}
+                </p>
+              </div>
+              <div style="height:54px;width:652px;padding-top:32px;padding-bottom:24px;box-sizing:content-box!important;">
+                <div style="width:163px;display:inline-block;height:54px;">
+                  <p style="margin:0px 0px 2px;padding:0px;font-size:16px;color:rgba(0,0,0,0.45);line-height:24px;">
+                    内部异常（500）
+                  </p>
+                  <p style="margin:0px;padding:0px;font-size:20px;font-weight:600;color:rgba(0,0,0,0.85);line-height:28px;white-space:nowrap;">
+                    {{ app.app_500_number }}
+                  </p>
+                </div><div style="width:163px;display:inline-block;height:54px;">
+                  <p style="margin:0px 0px 2px;padding:0px;font-size:16px;color:rgba(0,0,0,0.45);line-height:24px;">
+                    服务中断（502）
+                  </p>
+                  <p style="margin:0px;padding:0px;font-size:20px;font-weight:600;color:rgba(0,0,0,0.85);line-height:28px;white-space:nowrap;">
+                    {{ app.app_502_number }}
+                  </p>
+                </div><div style="width:163px;display:inline-block;height:54px;">
+                  <p style="margin:0px 0px 2px;padding:0px;font-size:16px;color:rgba(0,0,0,0.45);line-height:24px;">
+                    服务不可用（503）
+                  </p>
+                  <p style="margin:0px;padding:0px;font-size:20px;font-weight:600;color:rgba(0,0,0,0.85);line-height:28px;white-space:nowrap;">
+                    {{ app.app_503_number }}
+                  </p>
+                </div><div style="width:163px;display:inline-block;height:54px;">
+                  <p style="margin:0px 0px 2px;padding:0px;font-size:16px;color:rgba(0,0,0,0.45);line-height:24px;">
+                    请求超时（504）
+                  </p>
+                  <p style="margin:0px;padding:0px;font-size:20px;font-weight:600;color:rgba(0,0,0,0.85);line-height:28px;white-space:nowrap;">
+                    {{ app.app_504_number }}
+                  </p>
+                </div>
+              </div>
+              <ul style="display:block;list-style:none outside none;margin:0px;padding:0px 8px;border:1px solid rgba(0,0,0,0.15);border-radius:4px;">
+                <li style="display:block;list-style:none outside none;margin:0px;padding:11px 8px 11px 8px;height:22px;border-top:0px none rgba(0,0,0,0.65);font-size:14px;color:rgba(0,0,0,0.65);line-height:22px;font-weight:600;box-sizing:content-box!important;">
+                  <div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;width:353px;height:22px;line-height:22px;">
+                    API
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    请求次数
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    异常次数
+                  </div>
+                </li>
+                {% if app.app_api_error_list %}
+                {% for data in app.app_api_error_list %}
+                <li style="display:block;list-style:none outside none;margin:0px;padding:8px 8px 7px 8px;height:22px;border-top:1px solid rgba(0,0,0,0.09);font-size:14px;color:rgba(0,0,0,0.65);line-height:22px;box-sizing:content-box!important;">
+                  <div {% if not data[0][1] %} title="{{ data[0][0] }}" {% endif %} style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;width:353px;height:22px;line-height:22px;">
+                    {{ data[0][0] }}
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    {{ data[2] }}
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    {{ data[1] }}
+                  </div>
+                </li>
+                {% endfor %}
+                {% else %}
+                <li style="display:block;list-style:none outside none;margin:0px;padding:8px 8px 7px;height:22px;border-top:1px solid rgba(0,0,0,0.09);font-size:14px;color:rgba(0,0,0,0.25);line-height:22px;text-align:center;box-sizing:content-box!important;">
+                  暂无数据
+                </li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+          <div style="padding:24px;">
+            <div style="height:22px;line-height:22px;font-size:18px;font-weight:600;color:rgba(0,0,0,0.85);border-left:4px solid rgb(24,144,255);padding-left:8px;box-sizing:content-box!important;">
+              前端错误
+            </div>
+            <div style="margin-top:24px;position:relative;">
+              <div style="float:left;width:127px;border-right:0px none rgb(0,0,0);">
+                <div style="position:absolute;top:50%;margin-top:-27px;">
+                  <div style="padding-bottom:0px;height:54px;box-sizing:content-box!important;">
+                    <p style="margin:0px 0px 2px;padding:0px;font-size:16px;color:rgba(0,0,0,0.45);line-height:24px;">
+                      错误次数
+                    </p>
+                    <p style="margin:0px;padding:0px;font-size:20px;font-weight:600;color:rgba(0,0,0,0.85);line-height:28px;white-space:nowrap;">
+                      {{ app.app_error_crash_number }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <ul style="display:block;list-style:none outside none;margin:0px 0px 0px 127px;padding:0px 8px;border:1px solid rgba(0,0,0,0.15);border-radius:4px;">
+                <li style="display:block;list-style:none outside none;margin:0px;padding:11px 8px 11px 8px;height:22px;border-top:0px none rgba(0,0,0,0.65);font-size:14px;color:rgba(0,0,0,0.65);line-height:22px;font-weight:600;box-sizing:content-box!important;">
+                  <!-- 这里列的顺序为1、3、2 -->
+                  <div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;width:226px;height:22px;line-height:22px;">
+                    页面title
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    错误类型个数
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    发生次数
+                  </div>
+                </li>
+                {% if app.app_error_crash_list %}
+                {% for data in app.app_error_crash_list %}
+                <li style="display:block;list-style:none outside none;margin:0px;padding:8px 8px 7px 8px;height:22px;border-top:1px solid rgba(0,0,0,0.09);font-size:14px;color:rgba(0,0,0,0.65);line-height:22px;box-sizing:content-box!important;">
+                  <div {% if not data[0][1] %} title="{{ data[0][0] }}" {% endif %} style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;width:226px;line-height:22px;height:22px;">
+                    {{ data[0][0] }}
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;line-height:22px;height:22px;">
+                    {{ data[2] }}
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;line-height:22px;height:22px;">
+                    {{ data[1] }}
+                  </div>
+                </li>
+                {% endfor %}
+                {% else %}
+                <li style="display:block;list-style:none outside none;margin:0px;padding:8px 8px 7px;height:22px;border-top:1px solid rgba(0,0,0,0.09);font-size:14px;color:rgba(0,0,0,0.25);line-height:22px;text-align:center;box-sizing:content-box!important;">
+                  暂无数据
+                </li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+          {% if app.is_app %}
+          <div style="padding:24px;">
+            <div style="height:22px;line-height:22px;font-size:18px;font-weight:600;color:rgba(0,0,0,0.85);border-left:4px solid rgb(24,144,255);padding-left:8px;">
+              APP崩溃
+            </div>
+            <div style="margin-top:24px;position:relative;">
+              <div style="float:left;width:127px;border-right:0px none rgb(0,0,0);">
+                <div style="position:absolute;top:50%;margin-top:-27px;">
+                  <div style="padding-bottom:0px;height:54px;box-sizing:content-box!important;">
+                    <p style="margin:0px 0px 2px;padding:0px;font-size:16px;color:rgba(0,0,0,0.45);line-height:24px;">
+                      崩溃次数
+                    </p>
+                    <p style="margin:0px;padding:0px;font-size:20px;font-weight:600;color:rgba(0,0,0,0.85);line-height:28px;white-space:nowrap;">
+                      {{ app.app_app_crash_number }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <ul style="display:block;list-style:none outside none;margin:0px 0px 0px 127px;padding:0px 8px;border:1px solid rgba(0,0,0,0.15);border-radius:4px;">
+                <li style="display:block;list-style:none outside none;margin:0px;padding:11px 8px 11px 8px;height:22px;border-top:0px none rgba(0,0,0,0.65);font-size:14px;color:rgba(0,0,0,0.65);line-height:22px;font-weight:600;box-sizing:content-box!important;">
+                  <div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;width:358px;height:22px;line-height:22px;">
+                    错误原因
+                  </div><div style="display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;height:22px;line-height:22px;">
+                    崩溃次数
+                  </div>
+                </li>
+                <!-- list data row start -->
+                {% if app.app_app_crash_list %}
+                {% for data in app.app_app_crash_list %}
+                <li style="display:block;list-style:none outside none;margin:0px;padding:8px 8px 7px 8px;height:22px;border-top:1px solid rgba(0,0,0,0.09);font-size:14px;color:rgba(0,0,0,0.65);line-height:22px;box-sizing:content-box!important;">
+                  <div style="display:inline-block;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;width:358px;">
+                    {{ data[0] }}
+                  </div><div style="display:inline-block;height:22px;line-height:22px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;width:132px;text-align:right;">
+                    {{ data[1] }}
+                  </div>
+                </li>
+                {% endfor %}
+                {% else %}
+                <li style="display:block;list-style:none outside none;margin:0px;padding:8px 8px 7px;height:22px;border-top:1px solid rgba(0,0,0,0.09);font-size:14px;color:rgba(0,0,0,0.25);line-height:22px;text-align:center;box-sizing:content-box!important;">
+                  暂无数据
+                </li>
+                {% endif %}
+                <!-- list -->
+              </ul>
+            </div>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+      <!-- apps end -->
+    </div>
+    <!-- mail body end -->
+    <!-- mail header title start -->
+    <div style="width:100%;position:relative;">
+      <a href="https://fast.mypaas.com.cn" target="_blank" rel="noopener noreferrer" style="position:absolute;top:48px;left:0;display:block;width:210px;height:35px;">
+        <img src="data:image/png;base64,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" alt="fast-logo" width="210" height="35" style="width:210px;height:35px;display:block;" />
+      </a>
+      
+      <p style="text-align:right;margin:0px;padding:40px 0 0;line-height:28px;font-size:20px;font-weight:600;color:rgba(0,0,0,0.85);">
+        {{ product_name }}
+      </p>
+      <p style="text-align:right;margin:0px;padding:0px;line-height:22px;font-size:14px;color:rgba(0,0,0,0.45);padding-bottom:24px;">
+        {{ week_range }}
+      </p>
+    </div>
+    <!-- mail header title end -->
+  </div>
+
+</div>

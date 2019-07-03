@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  测试测试
+  <!-- <script src="./js/myWebLogTracker.min.js"></script>
+  <script src="./js/jquery.min.js"></script>
+  <script>window.__myWebLogTracker__ = window.myWebLogTracker({
+      "is_spa": true,
+      "log_event_attribute": "data-event",
+      "page_interval": 60000,
+      "include_search": true,
+      "product_code": "fast-test",
+      "manual_report_page_load": false, 
+      "log_content_attribute": "data-log", 
+      "api_ignore_urls": [], 
+      "app_code": "app_online1",
+      "collect_event_types": ["click","page","error","crash","api","user-defined","event"],
+      "debug":true,
+      "tenant_code_query": { key: "tenant", range: ["localstorage","cookie"] },
+      "user_account_query": { key: "user", range: ["url","cookie","localstorage",] }, 
+      "user_group_query": { key: "role", range: [ "url","localstorage","cookie"]}
+    });</script> -->
+  <script>
+    window.onerror = function(e){
+      console.log('error', e)
+    }
+    // a = c
+    // throw new RangeError([message[, fileName[, lineNumber]]])
+    // throw new RangeError('range', 'a.js', 333)
+    function reqListener () {
+      console.log(this.responseText);
+    }
+
+
+    var xhr = new XMLHttpRequest();
+    xhr.addEventListener("load", reqListener);
+    xhr.open("GET", "http://10.5.217.67:3008", false);
+    xhr.send();
+
+
+  </script>
+</body>
+</html>

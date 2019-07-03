@@ -1,7 +1,7 @@
 // 上传类,用来控制提交到后端数据的队列
 class Uploader { //
   constructor(t) {
-    this.growingio = t;
+    this.growingio = t; // 
     this.messageQueue = [];
     this.uploadingQueue = [];
     this.uploadTimer = null;
@@ -263,29 +263,46 @@ class Observer {
   getVisitorId() { // 返回微信.uid
     return this.weixin.uid
   }
-  getUserId() {
+  getUserId() { // 获取userId
     return this.cs1
   }
-  setUserId(t) {
+  setUserId(t) { // 设置userId 如果cs1的长度小于100,将t设置为userId 处罚 _sendEvent
     var e = t + "";
     e && 100 > e.length && (this.cs1 = e, this.lastPageEvent && this._sendEvent(this.lastPageEvent))
   }
-  clearUserId() {
+  clearUserId() { // 清除userId
     this.cs1 = null
   }
-  collectImp(t, e = null) {
-    this.growingio.vue && (t = t.$mp.page), this.growingio.taro && (t = t.$scope);
+  collectImp(t, e = null) { // 未调用,不知道有什么作用
+    this.growingio.vue && (t = t.$mp.page);
+    this.growingio.taro && (t = t.$scope);
     var i = {};
-    this._observer && this._observer.disconnect(), this._observer = t.isComponent ? t.createIntersectionObserver({
+    this._observer && this._observer.disconnect();
+    this._observer = t.isComponent ? t.createIntersectionObserver({
       observeAll: !0
     }) : wx.createIntersectionObserver(t, {
       observeAll: !0
-    }), this._relative = e ? this._observer.relativeTo(e) : this._observer.relativeToViewport(), this._relative.observe(".growing_collect_imp", t => {
+    });
+    this._relative = e ? this._observer.relativeTo(e) : this._observer.relativeToViewport();
+    this._relative.observe(".growing_collect_imp", t => {
       t.id && !i[t.id] && (this.track(t.dataset.gioTrack && t.dataset.gioTrack.name, t.dataset.gioTrack && t.dataset.gioTrack.properties), i[t.id] = !0)
     })
   }
-  appListener(t, e, i) {
-    this.isPauseSession || (this.growingio.debug && console.log("App.", e, Date.now()), "onShow" == e ? (this._parseScene(i), !this.lastCloseTime || Date.now() - this.lastCloseTime > this.keepAlive || this.lastScene && this.scene !== this.lastScene ? (this.resetSessionId(), this.sendVisitEvent(i, this.growingio.getLocationType), this.lastVstArgs = i, this.lastPageEvent = void 0) : this.useLastPageTime = !0) : "onHide" == e ? (this.lastScene = this.scene, this.growingio.forceFlush(), this.weixin.syncStorage(), this.isPauseSession || (this.lastCloseTime = Date.now(), this.sendVisitCloseEvent())) : "onError" == e && this.sendErrorEvent(i))
+  appListener(t, e, i) { // 
+    if (!this.isPauseSession) { // 当不是PauseSession时
+      this.growingio.debug && console.log("App.", e, Date.now());
+      if ("onShow" == e) {
+        this._parseScene(i), !this.lastCloseTime || Date.now() - this.lastCloseTime > this.keepAlive || this.lastScene && this.scene !== this.lastScene ? (this.resetSessionId(), this.sendVisitEvent(i, this.growingio.getLocationType), this.lastVstArgs = i, this.lastPageEvent = void 0) : this.useLastPageTime = !0
+      } else if ("onHide" == e) {
+        this.lastScene = this.scene, this.growingio.forceFlush(), this.weixin.syncStorage(), this.isPauseSession || (this.lastCloseTime = Date.now(), this.sendVisitCloseEvent())
+      } else {
+        "onError" == e && this.sendErrorEvent(i)
+      }
+
+
+      // 下侧为原代码
+      // "onShow" == e ? (this._parseScene(i), !this.lastCloseTime || Date.now() - this.lastCloseTime > this.keepAlive || this.lastScene && this.scene !== this.lastScene ? (this.resetSessionId(), this.sendVisitEvent(i, this.growingio.getLocationType), this.lastVstArgs = i, this.lastPageEvent = void 0) : this.useLastPageTime = !0) : "onHide" == e ? (this.lastScene = this.scene, this.growingio.forceFlush(), this.weixin.syncStorage(), this.isPauseSession || (this.lastCloseTime = Date.now(), this.sendVisitCloseEvent())) : "onError" == e && this.sendErrorEvent(i)
+    }
   }
   pageListener(t, e, i) {
     if (this.growingio.debug && console.log("Page.", t.route, "#", e, Date.now()), "onShow" === e) this.isPauseSession ? this.isPauseSession = !1 : (this.currentPage.touch(t), this.sendPage(t));
@@ -306,10 +323,26 @@ class Observer {
       i && (e = i)
     }
 
-    this.growingio.taroRootVMs && this.growingio.taroRootVMs[e] && (e = this.growingio.taroRootVMs[e]);
-    this.growingio.debug && console.log("Click on ", e, Date.now());
+    // this.growingio.taroRootVMs && this.growingio.taroRootVMs[e] && (e = this.growingio.taroRootVMs[e]);
+    // this.growingio.debug && console.log("Click on ", e, Date.now());
 
     "tap" === t.type || "longpress" === t.type ? this.sendClick(t, e) : -1 !== ["change", "confirm", "blur"].indexOf(t.type) ? this.sendChange(t, e) : "getuserinfo" === t.type ? (this.sendClick(t, e), t.detail && t.detail.userInfo && this.setVisitor(t.detail.userInfo)) : "getphonenumber" === t.type ? this.sendClick(t, e) : "contact" === t.type ? this.sendClick(t, e) : "submit" === t.type && this.sendSubmit(t, e)
+
+
+    if ('tap' === t.type || 'longpress' === t.type) {
+      this.sendClick(t, e)
+    } else if (-1 !==  ["change", "confirm", "blur"].indexOf(t.type)) {
+      this.sendChange(t, e)
+    } else if ("getuserinfo" === t.type) {
+      this.sendClick(t, e);
+      t.detail && t.detail.userInfo && this.setVisitor(t.detail.userInfo)
+    } else if ("getphonenumber" === t.type){
+      this.sendClick(t, e)
+    } else if ("contact" === t.type){
+      this.sendClick(t, e)
+    } else if ("submit" === t.type){
+      this.sendSubmit(t, e)
+    } 
   }
   getLocation(t = "wgs84") {
     this.growingio.getLocation = !0;
